@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/elalienx/docker-puppeteer.git"
   },
+  "type": "module",
   "author": "Eduardo Alvarez",
   "license": "ISC",
   "bugs": {

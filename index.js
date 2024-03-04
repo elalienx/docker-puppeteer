@@ -7,6 +7,9 @@ const data = [
   "https://www.linkedin.com/in/susanna-vaara-0b33b03a/",
 ];
 
+// Methods
+console.log("Docker Puppeteer 1");
+
 for (const url of data) {
   const profile = await scrapper(url);
 
