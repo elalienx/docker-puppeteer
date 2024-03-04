@@ -1,37 +1,24 @@
-// Node modules
 import puppeteer from "puppeteer";
 
-// Properties
-const data = [
-  "https://www.linkedin.com/in/eduardo-alvarez-nowak/",
-  "https://www.linkedin.com/in/susanna-vaara-0b33b03a/",
-];
-
-// Methods
-console.log("Docker Puppeteer 1");
-
-for (const url of data) {
-  const profile = await scrapper(url);
-
-  console.log(profile);
-}
+console.log("Docker Puppeteer 5");
+scrapper("https://www.linkedin.com/in/eduardo-alvarez-nowak/");
 
 async function scrapper(url) {
-  const browser = await puppeteer.launch({ headless: "new" });
+  console.log("1 scrapper start");
+
+  const browser = await puppeteer.launch();
+  console.log("2 scrapper browser launch");
+
   const page = await browser.newPage();
+  console.log("3 scrapper opening new page");
 
   await page.goto(url);
-  await page.waitForSelector(".contextual-sign-in-modal__screen");
+  console.log("4 scrapper opening url", url);
 
-  // Extract and print the text of article titles
-  const picTag = ".top-card__profile-image-container img";
+  await page.waitForSelector(".contextual-sign-in-modal__screen"); // Wait for the content to load
+
   const name = await page.$eval("h1", (item) => item.textContent.trim());
-  const pic = await page.$eval(picTag, (item) => item.src);
+  console.log("5 scrapper profile name", name);
 
   await browser.close();
-
-  return {
-    name: name,
-    pic: pic,
-  };
 }
