@@ -1,0 +1,22 @@
+{
+  "name": "docker-puppeteer",
+  "version": "1.0.0",
+  "description": "A spike to test how to run Puppeteer on a server environment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elalienx/docker-puppeteer.git"
+  },
+  "author": "Eduardo Alvarez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elalienx/docker-puppeteer/issues"
+  },
+  "homepage": "https://github.com/elalienx/docker-puppeteer#readme",
+  "dependencies": {
+    "puppeteer": "^22.3.0"
+  }
+}
