@@ -1,5 +1,9 @@
 # docker-puppeteer
 
+# About this branch
+
+This branch manages to install chromium, aparently launches but times out when finding a selector inside the page. At least it avoids the navigation close context bug.
+
 A spike to test how to run Puppeteer on a server environment.
 
 # 🖥️ Local enviroment test ✅
